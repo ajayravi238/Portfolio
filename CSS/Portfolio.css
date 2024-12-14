@@ -11,6 +11,11 @@ html {
     scroll-behavior: smooth;
 }
 
+::selection {
+    background-color: #54D5BB;
+    color: #0A192F;
+}
+
 /* Navtigation */
 .nav-parent {
     /* border: 1px solid white; */
@@ -73,7 +78,12 @@ html {
     .anchor {
         display: none;
     }
-
+    #brief, #education {
+        line-height: 50px;
+    }
+    .project p {
+        line-height: 30px;
+    }
 }
 
 .nav-parent .head {
@@ -244,11 +254,14 @@ html {
     min-width: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    align-items: center;
+    justify-content: center;
     gap: 10px;
 }
 
 .edu {
     /* border: 1px solid red; */
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -284,18 +297,20 @@ html {
     min-height: 80vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    align-items: center;
+    justify-content: center;
     gap: 20px;
+    padding: 100px;
     width: 100%;
 }
 
 .skill {
     /* border: 1px solid red; */
-    min-width: 100px;
+    min-width: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 20px;
 }
 
 .skill-name {
@@ -325,7 +340,7 @@ html {
 
 .percentage {
     top: 80px;
-    flex: 1;
+    flex: 0;
     font-size: 14px;
     font-weight: bold;
     color: #54D5BB;
