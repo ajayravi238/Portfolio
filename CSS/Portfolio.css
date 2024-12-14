@@ -109,7 +109,7 @@ html {
 #pic {
     /* border: 1px solid red; */
     width: 100%;
-    background-image: url(./Asserts/Photo.jpg);
+    background-image: url(../Asserts/Photo.jpg);
     background-repeat: no-repeat;
     min-height: 400px;
     width: 400px;
