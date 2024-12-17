@@ -14,30 +14,35 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
-        <ul class="side-bar">
-            <li id="close" onclick="hideSidebar()"><a href="#">
-                <i class="fa-solid fa-x"></i>
-            </a></li>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#edu-div">Education</a></li>
-            <li><a href="#skill-div">Skills</a></li>
-            <li><a href="#project-div">Project</a></li>
-            <li><a href="./Asserts/Ajay_Profile.pdf">Resume</a></li>
-        </ul>
-        <ul>
-            <li><h1>PORTFOLIO</h1></li>
-            <li class="hide"><a href="#home">Home</a></li>
-            <li class="hide"><a href="#edu-div">Education</a></li>
-            <li class="hide"><a href="#skill-div">Skills</a></li>
-            <li class="hide"><a href="#project-div">Project</a></li>
-            <span id="line" class="hide"></span>
-            <li class="hide"><a id="resume" href="./Asserts/Ajay_Profile.pdf">Resume</a></li>
-            <li onclick="showSidebar()"><a href="#">
-                <i id="menu-bar" class="fa-solid fa-bars"></i>
-            </a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav class="nav-bar">
+            <a href="#home" class="logo">PORTFOLIO</a>
+
+            <ul class="nav-menu">
+                <li class="nav-items">
+                    <a href="#home" class="nav-links">Home</a>
+                </li>
+                <li class="nav-items">
+                    <a href="#edu-div" class="nav-links">Education</a>
+                </li>
+                <li class="nav-items">
+                    <a href="#skill-div" class="nav-links">Skills</a>
+                </li>
+                <li class="nav-items">
+                    <a href="#project-div" class="nav-links">Project</a>
+                </li>
+                <span id="line"></span>
+                <li class="nav-items" id="resume">
+                    <a href="./Asserts/Ajay_Profile.pdf" class="nav-links">Resume</a>
+                </li>
+            </ul>
+            <div class="menu-bar">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
 
     <!-- Home -->
     <div id="home" class="home-parent">
@@ -227,15 +232,18 @@
 
 
     <script>
-        function showSidebar() {
-            const sidebar = document.querySelector('.side-bar');
-            sidebar.style.display = 'flex';
-        }
-        
-        function hideSidebar() {
-            const hidesidebar = document.querySelector('.side-bar');
-            hidesidebar.style.display = 'none';
-        }
+        const menuBar = document.querySelector(".menu-bar");
+        const navMenu = document.querySelector(".nav-menu");
+
+        menuBar.addEventListener("click", () => {
+            menuBar.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        })
+
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            menuBar.classList.remove("active");
+            navMenu.classList.remove("active");
+        }))
     </script>
 </body>
 </html>
