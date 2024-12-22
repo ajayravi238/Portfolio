@@ -249,7 +249,7 @@ body {
 
 #home-2 > #brief {
     font-weight: 700;
-    text-align: left;
+    text-align: justify;
     padding: 0 1em;
 }
 
@@ -405,7 +405,7 @@ body {
 }
 
 .project .para {
-    text-align: center;
+    text-align: justify;
     color: #ACACA2;
 }
 
