@@ -136,12 +136,8 @@ body {
     }
 
     @keyframes nav {
-        0% {
+        from {
             left: -1100px;
-        }
-
-        100% {
-            left: 0%;
         }
     }
 
@@ -166,6 +162,14 @@ body {
     }
 }
 
+@media (max-width: 500px) {
+    @keyframes nav {
+        from {
+            left: -600px;
+        }
+    }
+}
+
 /* Home */
 .home {
     /* border: 1px solid lime; */
@@ -177,7 +181,7 @@ body {
     gap: 1em;
 }
 
-#home-1 > #pic {
+#home-1>#pic {
     background-image: url(../Asserts/Photo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -194,14 +198,14 @@ body {
     justify-content: space-around;
 }
 
-#home-1 > #role {
+#home-1>#role {
     color: #54D5BB;
     font-weight: bolder;
     border-bottom: 1px solid #c4cbca;
     padding-bottom: 0.5em;
 }
 
-#home-1 > #contact {
+#home-1>#contact {
     /* border: 1px solid lime; */
     display: flex;
     align-items: center;
@@ -209,7 +213,7 @@ body {
     padding: 1em 0;
 }
 
-#contact > i {
+#contact>i {
     height: 1.5em;
     padding: 0.3em;
     border-radius: 0.3em;
@@ -218,7 +222,7 @@ body {
     font-size: 1.25em;
 }
 
-#home-1 > #contact span {
+#home-1>#contact span {
     font-size: 1.2em;
     font-weight: bolder;
 }
@@ -232,12 +236,12 @@ body {
     gap: 1em;
 }
 
-#home-2 > #intro > h2 {
+#home-2>#intro>h2 {
     font-size: 4em;
-    text-shadow: 10px 5px 10px #1d6feb;    
+    text-shadow: 10px 5px 10px #1d6feb;
 }
 
-#home-2 #intro > h1 {
+#home-2 #intro>h1 {
     font-size: 5em;
     text-align: center;
     background: linear-gradient(#02AABD, #00CDAC);
@@ -247,13 +251,13 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-#home-2 > #brief {
+#home-2>#brief {
     font-weight: 700;
     text-align: justify;
     padding: 0 1em;
 }
 
-#home-2 > #profile {
+#home-2>#profile {
     /* border: 1px solid red; */
     width: 100%;
     display: flex;
@@ -261,12 +265,12 @@ body {
     justify-content: space-around;
 }
 
-#home-2 > #profile {
+#home-2>#profile {
     font-size: 1.5em;
     font-weight: bolder;
 }
 
-#home-2 > #profile i {
+#home-2>#profile i {
     height: 35px;
     border-radius: 5px;
     padding: 3px;
@@ -288,11 +292,12 @@ body {
 }
 
 @media (max-width: 490px) {
-    #home-1 > #pic {
+    #home-1>#pic {
         height: 200px;
         width: 200px;
-    } 
-    #contact > i {
+    }
+
+    #contact>i {
         height: 1.3em;
         padding: 0.22em;
         border-radius: 0.3em;
@@ -300,24 +305,28 @@ body {
         color: black;
         font-size: 0.8em;
     }
-    #home-1 > #contact {
+
+    #home-1>#contact {
         gap: 0.2em;
     }
-    #home-1 > #contact span {
+
+    #home-1>#contact span {
         font-size: 1em;
     }
-    #home-2 > #intro > h2 {
-        font-size: 3em;   
-        text-shadow: 5px 2px 5px #1d6feb; 
+
+    #home-2>#intro>h2 {
+        font-size: 3em;
+        text-shadow: 5px 2px 5px #1d6feb;
     }
-    #home-2 > #profile {
+
+    #home-2>#profile {
         font-size: 1em;
         font-weight: bolder;
     }
 }
 
 /* Education */
-#edu-head  {
+#edu-head {
     /* border: 1px solid red; */
     width: 100%;
     color: #54D5BB;
@@ -345,7 +354,9 @@ body {
     justify-content: space-around;
 }
 
-.class, .name, .edu-percentage {
+.class,
+.name,
+.edu-percentage {
     color: #54D5BB;
     font-weight: bold;
 }
@@ -364,7 +375,77 @@ body {
         display: grid;
         grid-template-columns: 1fr;
         gap: 5em;
-    }  
+    }
+}
+
+/* Skills */
+#skill-head {
+    /* border: 1px solid red; */
+    width: 100%;
+    color: #54D5BB;
+    text-align: center;
+    font-weight: bolder;
+    padding: 70px 0 40px 0;
+    text-shadow: 0 0 20px #c4cbca;
+}
+
+.skills-parent {
+    min-height: 80vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 1em;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.skill-name {
+    flex: 1.5;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    flex: 3;
+    background-color: #c4cbca;
+    border-radius: 10px;
+    height: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #54D5BB;
+    border-radius: 10px 0 0 10px;
+    animation-name: progress;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+}
+
+.percentage {
+    flex: 0.5;
+    font-size: 14px;
+    font-weight: bold;
+    color: #54D5BB;
+}
+
+@keyframes progress {
+    from {
+        width: 0%;
+    }
+}
+
+
+@media (max-width: 650px) {
+    .skills-parent {
+        grid-template-columns: 1fr;
+    }
 }
 
 .project-head {
