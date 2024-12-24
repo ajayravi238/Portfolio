@@ -63,9 +63,13 @@ body {
 .logo {
     text-decoration: none;
     font-size: 1.6em;
-    color: #54D5BB;
+    color: #fff;
     font-style: oblique;
     font-weight: bolder;
+}
+
+.logo span {
+    color: #54D5BB;
 }
 
 .nav-links:hover {
@@ -107,7 +111,7 @@ body {
     background-color: #c4cbca;
 }
 
-@media(max-width: 1100px) {
+@media(max-width: 1200px) {
     .menu-bar {
         display: block;
     }
@@ -175,7 +179,7 @@ body {
     /* border: 1px solid lime; */
     min-height: 100vh;
     width: 100%;
-    padding-top: 4.6em;
+    padding-top: 5em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1em;
@@ -188,6 +192,7 @@ body {
     height: 400px;
     width: 400px;
     border-radius: 50%;
+    filter: drop-shadow(1px 1px 10px white);
 }
 
 #home-1 {
@@ -239,16 +244,69 @@ body {
 #home-2>#intro>h2 {
     font-size: 4em;
     text-shadow: 10px 5px 10px #1d6feb;
+    text-align: center;
 }
 
-#home-2 #intro>h1 {
-    font-size: 5em;
+.dynamic {
+    /* border: 1px solid lime; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: white;
+    font-weight: bolder;
+    padding: 0 0.5em;
     text-align: center;
-    background: linear-gradient(#02AABD, #00CDAC);
-    text-shadow: 10px 1px;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+}
+
+.dynamic .static {
+    color: #54D5BB;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.typing {
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+
+.typing li {
+    list-style: none;
+    position: relative;
+    top: 0;
+    animation: slide 6s steps(3) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -285px;
+    }
+}
+
+.typing li span {
+    position: relative;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.typing li span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #0A192F;
+    border-left: 2px solid #fff;
+    animation: type 2s steps(11) infinite;
+}
+
+@keyframes type {
+    100% {
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
 }
 
 #home-2>#brief {
@@ -322,6 +380,39 @@ body {
     #home-2>#profile {
         font-size: 1em;
         font-weight: bolder;
+    }
+
+    .dynamic .static {
+        font-size: 1em;
+    }
+
+    .typing li span {
+        font-size: 1em;
+    }
+
+    .typing li span::after {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 0;
+        height: 80%;
+        width: 100%;
+        background-color: #0A192F;
+        border-left: 2px solid #fff;
+        animation: type 2s steps(11) infinite;
+    }
+    
+    @keyframes type {
+        100% {
+            left: 100%;
+            margin: 0 -35px 0 35px;
+        }
+    }
+
+    @keyframes slide {
+        100% {
+            top: -270px;
+        }
     }
 }
 
