@@ -186,7 +186,7 @@ body {
 }
 
 #home-1>#pic {
-    background-image: url(../Asserts/Photo.jpg);
+    background-image: url(../Asserts/Pic.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 400px;
@@ -270,6 +270,14 @@ body {
     height: 90px;
     line-height: 90px;
     overflow: hidden;
+}
+
+.typing li:nth-child(2) {
+    margin-left: -25px !important;
+}
+
+.typing li:nth-child(1) {
+    margin-left: -250px !important;
 }
 
 .typing li {
@@ -400,6 +408,10 @@ body {
         background-color: #0A192F;
         border-left: 2px solid #fff;
         animation: type 2s steps(11) infinite;
+    }
+
+    .typing li:nth-child(1) {
+        margin-left: -180px !important;
     }
     
     @keyframes type {
