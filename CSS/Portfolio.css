@@ -357,7 +357,7 @@ body {
     }
 }
 
-@media (max-width: 490px) {
+@media (max-width: 520px) {
     #home-1>#pic {
         height: 200px;
         width: 200px;
