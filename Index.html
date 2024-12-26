@@ -30,14 +30,10 @@
                 <a href="#edu-div" class="nav-links">Education</a>
             </li>
             <li class="nav-items">
-                <a href="#skill-div" class="nav-links">Skills</a>
+                <a href="#skill-div" id="nav-skill" class="nav-links">Skills</a>
             </li>
             <li class="nav-items">
                 <a href="#project-div" class="nav-links">Project</a>
-            </li>
-            <span id="line"></span>
-            <li class="nav-items" id="resume">
-                <a href="./Asserts/Ajay_Profile.pdf" download class="nav-links">Resume</a>
             </li>
         </ul>
         <div class="menu-bar">
@@ -68,7 +64,7 @@
                 <div class="dynamic">
                     <div class="static">I'm</div>
                     <ul class="typing">
-                        <li><span>AJAY</span></li>
+                        <li><span>AJAY R</span></li>
                         <li><span>A JAVA CODER</span></li>
                         <li><span>A WEB DESIGNER</span></li>
                     </ul>
@@ -79,6 +75,9 @@
                     Development. I graduated with a Bachelor's degree in Computer Science and Engineering College,
                     Kovilpatti, in 2023. Currently, I am enhancing my skills by completing a Java Full Stack
                     Developement course at Jspiders, Chennai.</p>
+            </div>
+            <div class="resume">
+                <a href="./Asserts/Ajay_Profile.pdf" download>Download Resume</a>
             </div>
             <div id="profile">
                 <h2>Visit Here</h2>
@@ -252,10 +251,10 @@
             navMenu.classList.toggle("active");
         })
 
-        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-            menuBar.classList.remove("active");
-            navMenu.classList.remove("active");
-        }))
+        window.addEventListener("scroll", () => {
+            const scrolled = window.scrollY;
+            console.log(scrolled);
+        });
     </script>
 </body>
 

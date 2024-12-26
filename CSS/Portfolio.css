@@ -57,7 +57,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1em;
 }
 
 .logo {
@@ -77,23 +76,6 @@ body {
     color: #0A192F;
     border-radius: 10px;
     transition: ease-in-out 0.5s;
-}
-
-#line {
-    border: 1px solid #c4cbca;
-    height: 30px;
-}
-
-#resume {
-    border: 2px solid #54D5BB;
-    color: #54D5BB;
-    border-radius: 10px;
-    padding: 0.34em 0;
-}
-
-#resume:hover {
-    background-color: #54D5BB;
-    color: #0A192F;
 }
 
 .menu-bar {
@@ -143,14 +125,6 @@ body {
         from {
             left: -1100px;
         }
-    }
-
-    .nav-menu #line {
-        display: none;
-    }
-
-    #resume {
-        border: none;
     }
 
     .menu-bar.active .bar:nth-child(2) {
@@ -247,6 +221,10 @@ body {
     text-align: center;
 }
 
+.resume {
+    margin: 1.5em 0;
+}
+
 .dynamic {
     /* border: 1px solid lime; */
     display: flex;
@@ -277,7 +255,7 @@ body {
 }
 
 .typing li:nth-child(1) {
-    margin-left: -250px !important;
+    margin-left: -115px !important;
 }
 
 .typing li {
@@ -350,7 +328,22 @@ body {
     color: #c4cbca !important;
 }
 
-@media (max-width: 1000px) {
+.resume > a {
+    text-decoration: none;
+    border: 2px solid #54D5BB;
+    color: #c4cbca;
+    font-size: larger;
+    font-weight: bolder;
+    border-radius: 10px;
+    padding: 0.5em;
+}
+
+.resume a:hover {
+    background-color: #54D5BB;
+    color: #0A192F;
+}
+
+@media (max-width: 1060px) {
     .home {
         display: grid;
         grid-template-columns: 1fr;
@@ -390,6 +383,10 @@ body {
         font-weight: bolder;
     }
 
+    .resume {
+        margin: 2.5em 0;
+    }
+
     .dynamic .static {
         font-size: 1em;
     }
@@ -411,7 +408,7 @@ body {
     }
 
     .typing li:nth-child(1) {
-        margin-left: -180px !important;
+        margin-left: -90px !important;
     }
     
     @keyframes type {
@@ -425,6 +422,11 @@ body {
         100% {
             top: -270px;
         }
+    }
+
+    .resume a:hover {
+        background-color: #54D5BB;
+        color: #0A192F;
     }
 }
 
@@ -478,6 +480,11 @@ body {
         display: grid;
         grid-template-columns: 1fr;
         gap: 5em;
+    }
+
+    .edu {
+        gap: 2em;
+        font-size: larger;
     }
 }
 
@@ -610,6 +617,7 @@ body {
 .project .btn:hover {
     background-color: #54D5BB;
     color: #0A192F;
+    font-weight: 550;
 }
 
 @media (max-width: 1000px) {
