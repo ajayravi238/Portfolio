@@ -33,7 +33,7 @@ body {
     /* border: 1px solid red; */
     color: #c4cbca;
     text-decoration: none;
-    padding: 0.3em 1.8em;
+    padding: 0.3em 1em;
     font-size: 1.5em;
     font-weight: 500;
 }
@@ -93,7 +93,7 @@ body {
     background-color: #c4cbca;
 }
 
-@media(max-width: 1200px) {
+@media(max-width: 768px) {
     .menu-bar {
         display: block;
     }
@@ -123,7 +123,7 @@ body {
 
     @keyframes nav {
         from {
-            left: -1100px;
+            left: -768px;
         }
     }
 
@@ -140,10 +140,10 @@ body {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 425px) {
     @keyframes nav {
         from {
-            left: -600px;
+            left: -425px;
         }
     }
 }
@@ -479,7 +479,7 @@ body {
     width: 200px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 922px) {
     .edu-parent {
         display: grid;
         grid-template-columns: 1fr;
@@ -492,7 +492,7 @@ body {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 425px) {
     .edu {
         font-size: medium;
         gap: 2em;
@@ -641,7 +641,7 @@ body {
     font-weight: 550;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
     .project-parent {
         display: grid;
         grid-template-columns: 1fr;
