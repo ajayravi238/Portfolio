@@ -412,7 +412,7 @@ body {
     }
 
     .typing li:nth-child(2) {
-        margin-left: 0.1px !important;
+        margin-left: -28px !important;
     }
 
     @keyframes type {
